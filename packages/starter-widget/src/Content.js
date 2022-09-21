@@ -127,15 +127,14 @@ const DryRun = (props) => {
       filter: filter,
     });
 
-    console.log("result", result)
-    console.log("asyncResult", asyncResult)
+    // console.log("result", result)
+    // console.log("asyncResult", asyncResult)
 
     processData(result.data.getDataObject.content[0]);
 
     //process the asyncData
     if (stage === "dev") {
       processAsyncData(asyncFalseData);
-      console.log("result2", result)
       processData(result.data.getDataObject.content);
     }
   }, []);
