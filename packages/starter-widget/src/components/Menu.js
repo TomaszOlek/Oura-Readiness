@@ -40,8 +40,9 @@ const Menu = (props) =>{
     <>
     {isDataReady ?
 
-    <div className="menu">   
+    <div className="menu">
         <div className='background'>
+            <div className='background__burger'/>
             <div 
                 className='background__top' 
                 style={{backgroundImage: `url(${backgroundImage})`}}

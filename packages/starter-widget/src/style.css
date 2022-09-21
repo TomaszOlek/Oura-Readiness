@@ -76,6 +76,16 @@
     width: 298px;
     height: 298px;
 }
+.background__burger{
+    content: "";
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 275px;
+    top: 15px;
+}
 .background__top{
     content: "";
     height: 60%;
