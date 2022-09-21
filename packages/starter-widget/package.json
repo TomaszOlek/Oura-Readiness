@@ -1,9 +1,9 @@
 {
-  "name": "dry-run",
+  "name": "oura_readiness",
   "version": "0.0.1",
-  "description": "Gives recommendations for the best time to exercise based on exercise history (Fitbit, Oura, Strave, Nike+, etc.) combined with local weather data.",
-  "author": "hamza <hamzahalilovic.12@gmail.com>",
-  "homepage": "https://github.com/hamzahalilovic/widgets#readme",
+  "description": "Show users their today readiness as well as weekly average readiness.",
+  "author": "Tomasz <tomasz.olek.dev@gmail.com>",
+  "homepage": "https://github.com/TomaszOlek/Oura-Readiness",
   "license": "MIT",
   "main": "dist/esm/index.js",
   "publishConfig": {

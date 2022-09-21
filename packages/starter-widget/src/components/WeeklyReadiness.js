@@ -10,7 +10,7 @@ export default function WeeklyReadiness(props){
     const [chartData, setChartData] = useState([])
     const [averageScore, setAverageScore] = useState(0)
     const days = []
-    const readyData = props.readyData
+    const readyData = props.asyncReadyData
     const handleClick = props.handleClick
     let sumary = 0
 

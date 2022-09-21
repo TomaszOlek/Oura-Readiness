@@ -9,8 +9,9 @@ import Loading from "./Loading"
 
 
 const Menu = (props) =>{
+    const asyncReadyData = props.asyncReadyData
     const readyData = props.readyData
-    // const readyData = rawData.content
+
     const [backgroundImage, setBackgroundImage] = useState("")
     const [isDataReady, setIsDataReady] = useState(false)
     const [reload, setReaload] = useState(false)
@@ -21,7 +22,7 @@ const Menu = (props) =>{
     }
     
     useEffect(()=>{
-        fetch(`https://picsum.photos/id/${getRandomInt(1084)}/info`)
+        fetch(`https://picsum.photos/id/${getRandomInt(1084)}/info`) // TODO: Change API
         .then(res => {if(res.status === 404){
             setReaload(r => !r)
         } // SomeTimes we get 404 error so we need to get new image
@@ -57,7 +58,7 @@ const Menu = (props) =>{
             className={`scorll-container__items  
             ${changeItem ? "left" : "right"}`}>
                 <TodayReadiness readyData={readyData} handleClick={handleClick}/>
-                <WeeklyReadiness readyData={readyData} handleClick={handleClick}/>
+                <WeeklyReadiness asyncReadyData={asyncReadyData} handleClick={handleClick}/>
             </div>
         </div>
     </div>
