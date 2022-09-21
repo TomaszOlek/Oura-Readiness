@@ -24,12 +24,17 @@ export default function TodayReadiness(props){
             { name: 'Temperature', value: readyData[0] ? readyData[0].score_temperature : 0 }
         ])
         
-        if(true&&readyData.score>=85){
-            setReadinessScore("Optimal")
-        }else if(true&&readyData.score<=70){
-            setReadinessScore("Pay attension")
+        if (readyData[0]){
+
+            if(readyData[0].score>=85){
+                setReadinessScore("Optimal")
+            }else if(readyData[0].score<=70){
+                setReadinessScore("Pay attension")
+            }
+            else{setReadinessScore("Good")}
+            
         }else{
-            setReadinessScore("Good")
+            setReadinessScore("No Informations")
         }
 
     },[readyData])
