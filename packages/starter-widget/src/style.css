@@ -82,7 +82,7 @@
     width: 100%;
     background-repeat: no-repeat;
     background-size: 300px 200px;
-    border-radius: 7px;
+    border-radius: 9px;
 }
 .background__bottom::after{
     position: absolute;
@@ -105,8 +105,8 @@
     height: 40%;
     width: 100%;
     background-color: rgb(44, 45, 49);
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
 }
 .background__blur{
     position: absolute;
