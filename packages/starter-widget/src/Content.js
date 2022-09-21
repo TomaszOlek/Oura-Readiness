@@ -21,7 +21,7 @@ import "./style.css"
 // "querySleepSummary",
 // "querySleepSummariesAsync",
 
-const appID = process.env.APP_ID;
+const appID = "vZtgPtC93D1PYQC2cGXCzV";
 
 
 const DryRun = (props) => {
