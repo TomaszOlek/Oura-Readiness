@@ -14,14 +14,14 @@ export default function TodayReadiness(props){
 
     useEffect(()=>{
         setChartData ([
-            { name: 'Activity Balance', value: readyData[0] ? readyData[0].score_activity_balance : 0 },
-            { name: 'HRV Balance', value: readyData[0] ? readyData[0].score_hrv_balance : 0 },
-            { name: 'Previous Day', value: readyData[0] ? readyData[0].score_previous_day : 0 },
-            { name: 'Previous Night', value: readyData[0] ? readyData[0].score_previous_night : 0 },
-            { name: 'Recovery Index', value: readyData[0] ? readyData[0].score_recovery_index : 0 },
-            { name: 'Resting HR', value: readyData[0] ? readyData[0].score_resting_hr : 0 },
-            { name: 'Sleep Balance', value: readyData[0] ? readyData[0].score_sleep_balance : 0 },
-            { name: 'Temperature', value: readyData[0] ? readyData[0].score_temperature : 0 }
+            { name: 'Activity Balance', value: readyData[0] ? readyData[0].score_activity_balance : 1 },
+            { name: 'HRV Balance', value: readyData[0] ? readyData[0].score_hrv_balance : 1 },
+            { name: 'Previous Day', value: readyData[0] ? readyData[0].score_previous_day : 1 },
+            { name: 'Previous Night', value: readyData[0] ? readyData[0].score_previous_night : 1 },
+            { name: 'Recovery Index', value: readyData[0] ? readyData[0].score_recovery_index : 1 },
+            { name: 'Resting HR', value: readyData[0] ? readyData[0].score_resting_hr : 1 },
+            { name: 'Sleep Balance', value: readyData[0] ? readyData[0].score_sleep_balance : 1 },
+            { name: 'Temperature', value: readyData[0] ? readyData[0].score_temperature : 1 }
         ])
         
         if (readyData[0]){
@@ -32,7 +32,7 @@ export default function TodayReadiness(props){
                 setReadinessScore("Pay attension")
             }
             else{setReadinessScore("Good")}
-            
+
         }else{
             setReadinessScore("No Informations")
         }
@@ -47,7 +47,7 @@ export default function TodayReadiness(props){
                 <h1 className='title'>Readiness</h1> 
                 <div className='progress__div'>
                     <CircularProgress 
-                    value={(readyData[0] ? readyData[0].score : 0) /2} 
+                    value={(readyData[0] ? readyData[0].score : 2) /2} 
                     size='180px' 
                     thickness='4px'
                     transform="rotateZ(-90deg)"
@@ -74,7 +74,7 @@ export default function TodayReadiness(props){
                     <CartesianGrid vertical={false} horizontal={true} strokeDasharray="0"/>
                     <Bar dataKey="value" fill="#8884d8" />
                     <XAxis dataKey="name" hide="true" />
-                    <YAxis dataKey="value" fill="#ffffff"/>
+                    <YAxis dataKey="value" fill="#ffffff" domain={[0, 100]}/>
                     <Tooltip />
                 </BarChart>
             </div>
