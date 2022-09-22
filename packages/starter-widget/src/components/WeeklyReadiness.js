@@ -6,7 +6,7 @@ import Crown from "../img/Crown.png"
 import arrow_left from "../img/arrow_left.png"
 
 export default function WeeklyReadiness(props){
-
+ 
     const [chartData, setChartData] = useState([])
     const [averageScore, setAverageScore] = useState(0)
     const days = []

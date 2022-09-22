@@ -7,7 +7,7 @@ import Loading from "./Loading"
 
 // import rawData from "../rawData.json"
 
-
+ 
 const Menu = (props) =>{
     const asyncReadyData = props.asyncReadyData
     const readyData = props.readyData

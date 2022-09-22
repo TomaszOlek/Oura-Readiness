@@ -6,7 +6,7 @@ import arrow_right from "../img/arrow_right.png"
 import Crown from "../img/Crown.png"
 
 export default function TodayReadiness(props){
-
+ 
     const [chartData, setChartData] = useState([])
     const [readinessScore, setReadinessScore] = useState("")
     const readyData = props.readyData
