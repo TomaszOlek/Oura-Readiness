@@ -10,7 +10,7 @@ import "./style.css"
 const appID = "vZtgPtC93D1PYQC2cGXCzV";
 
 const asyncFalseData = [
-  "summary_date	score",
+  "summary_date,score",
   "2022-09-04,87",
   "2022-09-05,87",
   "2022-09-06,87",
