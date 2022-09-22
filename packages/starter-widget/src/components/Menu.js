@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from 'react';
-import ScrollContainer from 'react-indiana-drag-scroll'
 
 import TodayReadiness from "./TodayReadiness"
 import WeeklyReadiness from "./WeeklyReadiness"

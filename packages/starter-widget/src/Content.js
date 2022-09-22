@@ -11,13 +11,13 @@ const appID = "vZtgPtC93D1PYQC2cGXCzV";
 
 const asyncFalseData = [
   "summary_date	score",
-  "2022-09-04	87",
-  "2022-09-05	87",
-  "2022-09-06	87",
-  "2022-09-07	87",
-  "2022-09-08	87",
-  "2022-09-09	87",
-  "2022-09-10	87",
+  "2022-09-04,87",
+  "2022-09-05,87",
+  "2022-09-06,87",
+  "2022-09-07,87",
+  "2022-09-08,87",
+  "2022-09-09,87",
+  "2022-09-10,87",
 ];
 
 
@@ -36,11 +36,11 @@ const DryRun = (props) => {
     let filterData = data;
     let readyData = []
 
-    const keys = filterData[0].split("\t");
+    const keys = filterData[0].split(",");
     // console.log("keys", keys)
 
     for (let i=1; i < data.length; i++ ){
-      let field = filterData[i].split("\t");
+      let field = filterData[i].split(",");
       let data = {}
 
       for (let i=0; i < field.length; i++ ){
