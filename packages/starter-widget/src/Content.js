@@ -143,7 +143,7 @@ const DryRun = (props) => {
     console.log(asyncReadyData)
     console.log(readyData)
     if (asyncReadyData && readyData){
-      setIsDataReady(false)
+      setIsDataReady(true)
     }
   },[readyData,asyncReadyData])
 
