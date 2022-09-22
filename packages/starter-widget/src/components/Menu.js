@@ -12,6 +12,9 @@ const Menu = (props) =>{
     const asyncReadyData = props.asyncReadyData
     const readyData = props.readyData
 
+    console.log(readyData)
+    console.log(readyData.score)
+
     const [backgroundImage, setBackgroundImage] = useState("")
     const [isDataReady, setIsDataReady] = useState(false)
     const [reload, setReaload] = useState(false)
