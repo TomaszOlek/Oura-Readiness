@@ -54,7 +54,7 @@ export default function TodayReadiness(props){
                     color="white"
                     />
                 </div>
-                {readyData ? readyData.score >= 90 && <img className='readiness__crown' src={Crown}/> : "" }
+                {readyData ? readyData.score >= 89 && <img className='readiness__crown' src={Crown}/> : "" }
                 <p className='readiness__score'>{readyData ? readyData.score : 0}</p>
                 <p className='readiness__status'>{readinessScore}</p>
                 <div style={{position: "absolute"}} onClick={handleClick}>
