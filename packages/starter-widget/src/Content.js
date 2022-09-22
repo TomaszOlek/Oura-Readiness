@@ -134,7 +134,7 @@ const DryRun = (props) => {
     //process the asyncData
     if (stage === "dev") {
       processAsyncData(asyncFalseData);
-      processData(result.data.getDataObject.content);
+      processData(result.data.getDataObject.content[0]);
     }
   }, []);
 
