@@ -14,8 +14,6 @@ export default function WeeklyReadiness(props){
     const handleClick = props.handleClick
     let sumary = 0
 
-    console.log("props.asyncReadyData", props.asyncReadyData)
-
     for(let i=0;i<=6; i++){
         const d = new Date(); 
         const dd = d.setDate(d.getDate() - i); 
