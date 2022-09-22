@@ -62,6 +62,7 @@ const DryRun = (props) => {
     console.log("ORIGINAL PROCESS DATA", data);
 
     const filterData = data;
+    console.log(filterData[0])
     console.log("result", filterData)
 
     setReadyData(filterData)
@@ -141,7 +142,7 @@ const DryRun = (props) => {
 
   useEffect(()=>{
     console.log(asyncReadyData)
-    console.log(readyData)
+    console.log(readyData[0])
     if (asyncReadyData && readyData){
       setIsDataReady(true)
     }
