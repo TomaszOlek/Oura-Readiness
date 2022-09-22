@@ -62,7 +62,6 @@ const DryRun = (props) => {
     console.log("ORIGINAL PROCESS DATA", data);
 
     const filterData = data;
-    console.log(filterData[0])
     console.log("result", filterData)
 
     setReadyData(filterData)
@@ -79,7 +78,6 @@ const DryRun = (props) => {
         payload.data.dataconnector === "Oura/queryReadinessSummariesAsync" &&
         payload.data.content.length > 1
       ) {
-        console.log("update")
         processAsyncData(payload.data.content);
       }
       console.log("PAYLOAD DATA", payload);

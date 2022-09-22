@@ -13,7 +13,7 @@ export default function TodayReadiness(props){
     const handleClick = props.handleClick
 
     console.log("123")
-    console.log(readyData)
+    console.log(readyData[0])
 
     useEffect(()=>{
         setChartData ([
