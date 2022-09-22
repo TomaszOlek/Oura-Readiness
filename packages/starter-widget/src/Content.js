@@ -37,7 +37,7 @@ const DryRun = (props) => {
     let readyData = []
 
     const keys = filterData[0].split("\t");
-    console.log("keys", keys)
+    // console.log("keys", keys)
 
     for (let i=1; i < data.length; i++ ){
       let field = filterData[i].split("\t");
@@ -53,7 +53,7 @@ const DryRun = (props) => {
       readyData.push(data)
     }
 
-    console.log("async result", readyData)
+    // console.log("async result", readyData)
   
     setAsyncReadyData(readyData)
   }
@@ -62,7 +62,7 @@ const DryRun = (props) => {
     console.log("ORIGINAL PROCESS DATA", data);
 
     const filterData = data;
-    console.log("result", filterData)
+    // console.log("result", filterData)
 
     setReadyData(filterData)
   }
@@ -94,12 +94,12 @@ const DryRun = (props) => {
     //get Today date
     const today = d.setDate(d.getDate()); 
     const todayDateStr = new Date(today).toISOString().split("T")[0];
-    console.log("date", todayDateStr)
+    // console.log("date", todayDateStr)
  
     //get a date that was 6("referenceDay") days ago 
     const dd = d.setDate(d.getDate() - referenceDay); 
     const asyncDateStr = new Date(dd).toISOString().split("T")[0];
-    console.log("date", asyncDateStr)
+    // console.log("date", asyncDateStr)
 
     //Set filter to get data from last 6("referenceDay") days
     const asyncFilter = {
@@ -134,13 +134,11 @@ const DryRun = (props) => {
     //process the asyncData
     if (stage === "dev") {
       processAsyncData(asyncFalseData);
-      processData(result.data.getDataObject.content);
+      processData(result.data.getDataObject.content[0]); //I had to add the [0] here
     }
   }, []);
 
   useEffect(()=>{
-    console.log(asyncReadyData)
-    console.log(readyData[0])
     if (asyncReadyData && readyData){
       setIsDataReady(true)
     }

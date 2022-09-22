@@ -12,9 +12,6 @@ export default function TodayReadiness(props){
     const readyData = props.readyData
     const handleClick = props.handleClick
 
-    console.log("123")
-    console.log(readyData[0])
-
     useEffect(()=>{
         setChartData ([
             { name: 'Activity Balance', value: readyData ? readyData.score_activity_balance : 1 },
